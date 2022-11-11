@@ -51,11 +51,60 @@ export default function Home() {
         src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668163260/comments_abxqvo.png",
         name: "Dark - course comments"
       },
+    ],
+
+    light: [
+      {
+        id: 1,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668171529/Screenshot_2022-11-11_at_15.57.54_yx7eve.png",
+        name: "Light - authentecation"
+      },
+      {
+        id: 2,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176173/Light_-_Dashboard_pb1bhm.png",
+        name: "Light - dashboard"
+      },
+      {
+        id: 3,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176173/Light_-_Search_Course_w4pepi.png",
+        name: "Light - search course"
+      },
+      {
+        id: 4,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176169/Light_-_Course_Result_hmbjum.png",
+        name: "Light - course result"
+      },
+      {
+        id: 5,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176170/Light_-_Courses_Cart_rwcxef.png",
+        name: "Light - course cart"
+      },
+      {
+        id: 6,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668171530/Screenshot_2022-11-11_at_15.58.10_efyepv.png",
+        name: "author detail"
+      },
+      {
+        id: 7,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176167/Light_-_Course_Detail_qbmtqx.png",
+        name: "Light - course detail"
+      },
+      {
+        id: 8,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176167/Light_-_Course_Playlist_f78v8j.png",
+        name: "Light - course playlist"
+      },
+      {
+        id: 9,
+        src: "https://res.cloudinary.com/dlt0f5pvq/image/upload/v1668176168/Light_-_Course_Comments_kqbz0k.png",
+        name: "Light - course comments"
+      },
     ]
   }
+
   return (
     <Layout>
-      <h1 className="text-5xl font-bold">Dark Mode</h1> <br />
+      <h1 className="text-5xl font-bold">Dark Mode</h1><br />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {data.dark.map((image) => (
           <div className="card">
@@ -71,6 +120,20 @@ export default function Home() {
         ))}
       </div><br />
       <h1 className="text-5xl font-bold">Light Mode</h1> <br />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {data.light.map((img) => (
+          <div className="card">
+            <Image
+              title={img.name}
+              width={300}
+              height={200}
+              src={img.src}
+              alt={img.name}
+              className="rounded shadow"
+            />
+          </div>
+        ))}
+      </div>
     </Layout>
   )
 }
